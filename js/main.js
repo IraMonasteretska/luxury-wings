@@ -18,9 +18,38 @@ $(document).ready(function () {
     });
 
     // language
-    $('.header__language').click(function(){
+    $('.header__language').click(function () {
         $(this).toggleClass('open');
     })
+
+    // testimonials
+    var swiper = new Swiper(".testimonials-slider", {
+        slidesPerView: 2,
+        spaceBetween: 24,
+
+    });
+
+    // clients
+    var swiper = new Swiper(".clients-slider", {
+        slidesPerView: 'auto',
+        spaceBetween: 60,
+        loop: true,
+        speed: 700,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+
+    // to top
+    $('body').on('click', '.totop', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600);
+    });
 
 
 })

@@ -83,7 +83,31 @@ h2 {
     }
 }
 
+h3 {
+    color: $primary;
+    font-size: 40px;
+    line-height: 130%;
+    font-weight: 500;
 
+    &.white {
+        color: #fff;
+    }
+}
+
+h4 {
+    color: $primary;
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 500;
+
+    &.white {
+        color: #fff;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
 
 // ---------------
 .subtitle {
@@ -138,6 +162,39 @@ h2 {
     &.hasimg {
         padding-right: 8px;
         padding-inline-end: 8px;
+
+        img {
+            width: 30px;
+            // margin-left: 10px;
+            margin-inline-start: 10px;
+        }
+    }
+}
+
+.green-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 47px;
+    padding: 3px 24px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    background: $primary;
+    line-height: normal;
+
+    &:hover {
+        background: #fff;
+        color: $primary;
+    }
+
+    &.hasimg {
+        padding-right: 8px;
+        padding-inline-end: 8px;
+
         img {
             width: 30px;
             // margin-left: 10px;
@@ -152,12 +209,26 @@ h2 {
 
 
 
-
-
 [dir="rtl"] {
 
     .header__nav .has-submenu img,
     .header__language img {
         transform: translateY(-50%) scaleX(-1); // відзеркалює стрілку горизонтально
+    }
+
+    .offset-lg-1 {
+        margin-left: 0;
+        margin-right: 8.333333%; // 1 колонка з 12
+    }
+
+    .testimonials-item {
+        .rate .author {
+            padding-right: 20px;
+        }
+
+        .descr {
+            border-left: none;
+            border-right: 3px solid #B79946;
+        }
     }
 }
