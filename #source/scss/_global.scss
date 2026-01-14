@@ -216,9 +216,18 @@ h4 {
         transform: translateY(-50%) scaleX(-1); // відзеркалює стрілку горизонтально
     }
 
-    .offset-lg-1 {
-        margin-left: 0;
-        margin-right: 8.333333%; // 1 колонка з 12
+    .swiper-button-next {
+       order: 1;
+    }
+    .swiper-button-prev {
+        order: 2;
+    }
+
+    @media(min-width:991px) {
+        .offset-lg-1 {
+            margin-left: 0;
+            margin-right: 8.333333%; // 1 колонка з 12
+        }
     }
 
     .testimonials-item {
@@ -231,4 +240,80 @@ h4 {
             border-right: 3px solid #B79946;
         }
     }
+
+    @media(max-width:767.8px) {
+        .cta_btnwrap {
+            text-align: right;
+        }
+    }
+}
+
+
+
+@media(max-width:1399.8px) {
+    .subtitle {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+}
+
+@media(max-width:1399.8px) {
+    .subtitle {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .white-btn {
+        min-height: 44px;
+        padding: 3px 20px;
+    }
+
+    .gold-btn {
+        min-height: 44px;
+        padding: 3px 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+
+        br {
+            display: none;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+
+        br {
+            display: none;
+        }
+    }
+
+
+
 }
