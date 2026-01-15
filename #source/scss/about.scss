@@ -1,0 +1,396 @@
+.hero {
+    height: 565px;
+    position: relative;
+    overflow: hidden;
+    padding: 75px 0 20px 0;
+    text-align: center;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#133821, 0.7);
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+}
+
+.hero__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+
+    h1 {
+        color: #fff;
+        margin-bottom: 16px;
+    }
+
+    p:not(.subtitle) {
+        color: #E6E6E6;
+        font-size: 18px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.info-section {
+    padding: 120px 0 20px;
+    background: #E6E6E6;
+}
+
+.opacitytext {
+    opacity: 0.8;
+}
+
+.infosect-descr {
+    p:not(.subtitle) {
+        color: #4C4C4C;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .btngroup {
+        margin-top: 32px;
+    }
+}
+
+.reputaion-imgwrap {
+    position: relative;
+    text-align: left;
+}
+
+.reputaion-imgwrap__mainpic {
+    width: 100%;
+    vertical-align: top;
+    width: calc(100% - 33px);
+    display: inline-block;
+}
+
+.labelbox {
+    display: inline-flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-inline-end: 8px;
+    padding-inline-start: 14px;
+    // padding: 8px 8px 8px 14px;
+    min-height: 82px;
+    background: $primary-gold;
+    align-items: center;
+    width: 253px;
+    position: absolute;
+    right: 0;
+    bottom: 54px;
+
+    p {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 110%;
+        margin: 0;
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            color: #E6E6E6;
+            display: block;
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: 62px;
+        flex: 0 0 62px;
+    }
+
+    .labelbox__info {
+        // padding-left: 24px;
+        padding-inline-start: 24px;
+        width: 100%;
+        max-width: calc(100% - 62px);
+        flex: 0 0 calc(100% - 62px);
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 33px;
+        height: 54px;
+        background: url('../img/about/label-element.png') no-repeat center / 100% 100%;
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+}
+
+.commitment {
+    padding: 100px 0 140px;
+    background: #E6E6E6;
+}
+
+.commitment__header {
+    text-align: center;
+    margin-bottom: 56px;
+
+    h2 {
+        margin-bottom: 4px;
+    }
+
+    p {
+        margin: 0;
+        color: #031A1A;
+        font-size: 18px;
+    }
+}
+
+.commitment-item {
+    position: relative;
+    overflow: hidden;
+    height: 288px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(to top, #0F5850, rgba(#0F5850, 0));
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    p {
+        margin: 0px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 35px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+        z-index: 1;
+        // padding: 0 24px 0 28px;
+        padding-inline-end: 24px;
+        padding-inline-start: 28px;
+    }
+}
+
+.ctabox {
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+    min-height: 467px;
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(269.8deg, rgba(183, 153, 70, 0) 18.43%, #B79946 48.53%);
+
+    }
+
+    h2 {
+        margin-bottom: 52px;
+    }
+
+}
+
+.ctabox-img {
+    position: absolute;
+    // right: 0;
+    inset-inline-end: 0;
+    top: 0;
+    height: 100%;
+    max-width: inherit;
+}
+
+@media(max-width:1599.8px) {
+    .commitment-item p {
+        bottom: 20px;
+        font-size: 21px;
+    }
+
+    .commitment__header {
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width:1399.8px) {
+
+    .hero {
+        height: 500px;
+    }
+
+    .info-section {
+        padding: 100px 0 20px;
+    }
+
+    .commitment {
+        padding: 80px 0 100px;
+    }
+
+    .commitment-item p {
+        font-size: 18px;
+    }
+
+    .commitment-item {
+        height: 250px;
+    }
+
+    .ctabox {
+        min-height: 400px;
+    }
+
+
+
+    .hero p:not(.subtitle),
+    .infosect-descr p:not(.subtitle),
+    .commitment__header p {
+        font-size: 16px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+
+    .hero {
+        height: auto;
+        min-height: 450px;
+        padding: 90px 0 20px 0;
+    }
+
+    .infosect-descr p:not(.subtitle) {
+        margin-bottom: 15px;
+    }
+
+}
+
+@media(max-width:991.8px) {
+    .info-section {
+        padding: 80px 0 0 0;
+    }
+
+    .commitment {
+        padding: 80px 0;
+    }
+
+    .infosect-descr .btngroup {
+        margin-top: 25px;
+    }
+
+    .commitment-item p {
+        padding-inline-end: 15px;
+        padding-inline-start: 15px;
+        font-size: 16px;
+    }
+
+    .commitment__header {
+        margin-bottom: 30px;
+    }
+
+    .ctabox h2 {
+        margin-bottom: 30px;
+    }
+
+    .ctabox {
+        min-height: 350px;
+    }
+}
+
+@media(max-width:767.8px) {
+
+    .hero {
+        padding-top: 100px;
+    }
+    
+    .infosect-descr {
+        margin-bottom: 30px;
+    }
+
+    .commitment-item {
+        margin-bottom: 20px;
+    }
+
+    .commitment-item p {
+        font-size: 20px;
+    }
+
+    .commitment {
+        padding-bottom: 60px;
+    }
+
+    .ctabox:after {
+        width: 70%;
+    }
+
+
+
+}
+
+@media(max-width:575.8px) {
+    .hero {
+        padding-top: 120px;
+    }
+
+    .info-section {
+        padding-top: 60px;
+    }
+
+    .commitment {
+        padding: 60px 0;
+    }
+
+    .commitment__header {
+        margin-bottom: 20px;
+    }
+
+    .ctabox {
+        min-height: 250px;
+        padding: 40px 0;
+    }
+
+    .ctabox h2 {
+        margin-bottom: 15px;
+    }
+
+
+
+}

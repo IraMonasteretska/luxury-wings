@@ -280,7 +280,8 @@ header.header {
             transform: translateY(0);
         }
 
-        span img {
+        span img,
+        span svg {
             transform: translateY(-50%) rotate(-180deg);
         }
     }
