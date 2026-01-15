@@ -1,7 +1,10 @@
 $(document).ready(function () {
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
 
+    
+    if ($("#scene").length) {
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    }
     // menu
     $('.has-submenu a').click(function (e) {
         e.preventDefault();
@@ -22,7 +25,7 @@ $(document).ready(function () {
         $(this).parent().toggleClass('open');
     })
 
-     $(document).click(function (event) {
+    $(document).click(function (event) {
         let $target = $(event.target);
         if (!$target.closest('.header__language').length) {
             $('.header__language').removeClass('open');

@@ -29,6 +29,8 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
 
     &.hidden {
         overflow: hidden;
@@ -69,7 +71,16 @@ p {
     margin-top: 0;
 }
 
-h1 {}
+h1 {
+    color: $primary;
+    font-size: 48px;
+    line-height: 110%;
+    font-weight: 700;
+
+    &.white {
+        color: #fff;
+    }
+}
 
 h2 {
     color: $primary;
@@ -137,6 +148,14 @@ h4 {
         background: $primary;
         color: #fff;
     }
+
+    &.white-btn_goldtext {
+        color: $primary-gold;
+
+        &:hover {
+            color: #fff;
+        }
+    }
 }
 
 .gold-btn {
@@ -156,6 +175,10 @@ h4 {
 
     &:hover {
         background: $primary;
+        color: #fff;
+    }
+
+    &.gold-btn_whitetext {
         color: #fff;
     }
 
@@ -217,11 +240,19 @@ h4 {
     }
 
     .swiper-button-next {
-       order: 1;
+        order: 1;
     }
+
     .swiper-button-prev {
         order: 2;
     }
+
+    .ctabox:after {
+        left: initial;
+        right: 0;
+        background: linear-gradient(89.8deg, rgba(183, 153, 70, 0) 18.43%, #B79946 48.53%);
+    }
+
 
     @media(min-width:991px) {
         .offset-lg-1 {
@@ -255,6 +286,10 @@ h4 {
         font-size: 18px;
     }
 
+    h1 {
+        font-size: 42px;
+    }
+
     h2 {
         font-size: 42px;
     }
@@ -268,9 +303,13 @@ h4 {
     }
 }
 
-@media(max-width:1399.8px) {
+@media(max-width:1199.8px) {
     .subtitle {
         font-size: 16px;
+    }
+
+    h1 {
+        font-size: 36px;
     }
 
     h2 {
@@ -295,6 +334,10 @@ h4 {
     .gold-btn {
         min-height: 44px;
         padding: 3px 20px;
+    }
+
+    h1 {
+        font-size: 32px;
     }
 
     h2 {

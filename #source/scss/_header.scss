@@ -73,7 +73,8 @@ header.header {
         }
     }
 
-    img {
+    img,
+    svg {
         width: 20px;
         vertical-align: top;
     }
@@ -140,12 +141,14 @@ header.header {
                     // padding-right: 28px;
                     padding-inline-end: 28px;
 
-                    &.rotate img {
+                    &.rotate img,
+                    &.rotate svg {
                         transform: translateY(-50%) rotate(-180deg);
                     }
                 }
 
-                img {
+                img,
+                svg {
                     width: 24px;
                     position: absolute;
                     // right: 0;
@@ -153,6 +156,7 @@ header.header {
                     top: 50%;
                     transform: translateY(-50%);
                     transition: 0.3s;
+                    margin-top: -1px;
                 }
             }
         }
@@ -218,7 +222,8 @@ header.header {
             color: #0F5850;
         }
 
-        img {
+        img,
+        svg {
             position: absolute;
             width: 24px;
             // right: 0;
@@ -226,6 +231,7 @@ header.header {
             top: 50%;
             transform: translateY(-50%);
             transition: 0.3s;
+            margin-top: -1px;
         }
     }
 
@@ -283,6 +289,51 @@ header.header {
 .header__burger,
 .closemenu {
     display: none;
+}
+
+
+.header__white {
+    .header__contactlist a {
+        color: #E6E6E6;
+
+        &:hover {
+            color: $primary-gold;
+        }
+    }
+
+    .header__sociallist li a {
+
+        svg path {
+            transition: 0.3s;
+        }
+
+        &:hover {
+            opacity: 1;
+
+            svg path {
+                fill: $primary-gold;
+            }
+        }
+    }
+
+    .header__nav>ul>li>a {
+        color: #fff;
+    }
+
+    .header__nav>ul>li>a:after {
+        background: #fff;
+    }
+
+    .header__language span {
+        color: #E6E6E6;
+    }
+
+    .header__nav>ul>li.has-submenu svg path,
+    .header__language span svg path {
+        stroke: #fff;
+    }
+
+
 }
 
 @media(max-width:1199.8px) {
@@ -414,102 +465,18 @@ header.header {
         background: transparent;
     }
 
-    // button.burger {
-    //     display: inline-block;
-    //     position: relative;
-    //     padding: 0;
-    //     width: 32px;
-    //     height: 20px;
-    //     border: none;
-    //     background: transparent;
-    //     cursor: pointer;
+    .header__white .header__nav>ul>li>a {
+        color: #0F5850;
+    }
 
-    //     &:focus {
-    //         outline: none;
-    //     }
+    .header__nav>ul>li.has-submenu svg path {
+        stroke: #043631;
+    }
 
-    //     &.burger2 {
+    .header__white .header__nav>ul>li.has-submenu svg path {
+    stroke: #043631;
+}
 
-    //         &:after,
-    //         &:before,
-    //         span {
-    //             width: 100%;
-    //             height: 2px;
-    //             border-radius: 100px;
-    //             position: absolute;
-    //             display: block;
-    //             background: #0F5850;
-    //             right: 0;
-
-    //         }
-
-    //         &:after,
-    //         &:before {
-    //             content: "";
-    //             transition: 0.3s width 0.4s;
-    //         }
-
-    //         &:after {
-    //             top: 0px;
-    //             left: 0px;
-    //             margin-top: 0px;
-    //         }
-
-    //         &:before {
-    //             bottom: 0px;
-    //             right: 0px;
-    //             margin-bottom: 0px;
-    //         }
-
-    //         span {
-    //             top: 50%;
-    //             margin-top: -1px;
-    //             transition: transform 0.3s;
-
-    //             &:before {
-    //                 content: "";
-    //                 background: #0F5850;
-    //                 width: 100%;
-    //                 height: 2px;
-    //                 border-radius: 100px;
-    //                 position: absolute;
-    //                 left: 0px;
-    //                 transition: transform 0.3s;
-    //             }
-    //         }
-
-    //         &.on {
-
-
-    //             &:after {
-    //                 transition: all 0.2s;
-    //                 width: 0%;
-    //                 left: 0px;
-    //             }
-
-    //             &:before {
-    //                 transition: all 0.2s;
-    //                 width: 0%;
-    //                 right: 0px;
-    //             }
-
-    //             span {
-    //                 transform: rotate(45deg);
-    //                 transition: 0.3s transform 0.4s;
-
-    //                 &:before {
-    //                     transform: rotate(-90deg);
-    //                     transition: 0.3s transform 0.4s;
-    //                 }
-    //             }
-
-
-    //         }
-    //     }
-
-    // }
-
-    
 
 }
 
@@ -527,7 +494,8 @@ header.header {
         }
     }
 
-    .header__sociallist img {
+    .header__sociallist img,
+    .header__sociallist svg {
         vertical-align: top;
     }
 
