@@ -1,4 +1,254 @@
-.info-section.info-section__padding {
+.info-services {
     padding: 130px 0;
-    background: #fff;
+
+    .imgwrap {
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+
+    p {
+        margin-bottom: 32px;
+        color: $neutral-700;
+        font-size: 18px;
+    }
+
+    h4 {
+        margin-bottom: 15px;
+        color: #031A1A;
+        font-size: 32px;
+        line-height: 130%;
+        font-weight: 500;
+    }
+
+    .styled-list {
+        margin-bottom: 32px;
+    }
 }
+
+.styled-list {
+    li {
+        color: $primary;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 40px;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('../img/service/check-icon.svg') no-repeat center / 100%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.all-services {
+    padding: 130px 0 105px;
+    background: #F8F7F3;
+    position: relative;
+    overflow: hidden;
+
+    .bgel1 {
+        position: absolute;
+        top: 0;
+        left: 66px;
+    }
+
+    .bgel2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.all-services__title {
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 0;
+        color: #949494;
+        font-size: 18px;
+    }
+}
+
+.all-services__itemcol {
+    margin-bottom: 20px;
+}
+
+.all-services__item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    // padding: 20px 92px 20px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline-start: 20px;
+    padding-inline-end: 92px;
+    position: relative;
+    font-weight: 500;
+    color: #000;
+    min-height: 112px;
+    height: 100%;
+    transition: 0.3s;
+
+    &:hover {
+        background: $primary;
+        color: #fff;
+    }
+
+    .item-arrow {
+        background: #F8F7F3;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        // right: 32px;
+        inset-inline-end: 32px;
+    }
+}
+
+.ctabox.ctabox__v2 {
+    &::after {
+        display: none;
+    }
+
+    .ctabox-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 30% 0;
+    }
+}
+
+@media(max-width:1399.8px) {
+    .info-services {
+        padding: 100px 0;
+    }
+
+    .all-services {
+        padding: 100px 0;
+    }
+
+    .info-services p {
+        font-size: 16px;
+    }
+
+    .styled-list li {
+        font-size: 16px;
+    }
+
+    .info-services h4 {
+        font-size: 28px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+    .all-services__title {
+        margin-bottom: 30px;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .all-services .bgel2 {
+        left: initial;
+        right: 0;
+    }
+
+}
+
+@media(max-width:991.8px) {
+
+    .info-services,
+    .all-services {
+        padding: 80px 0;
+    }
+
+    .info-services {
+        p {
+            margin-bottom: 20px;
+        }
+
+        .descr {
+            margin-bottom: 30px;
+        }
+    }
+
+    .all-services__item {
+        padding-inline-end: 80px;
+
+        .item-arrow {
+            inset-inline-end: 20px;
+
+        }
+    }
+}
+
+@media(max-width:767.8px) {
+    .info-services h4 {
+        font-size: 24px;
+    }
+
+    .all-services__item {
+        min-height: 90px;
+    }
+
+    .all-services .bgel2 {
+        display: none;
+    }
+}
+
+@media(max-width:575.8px) {
+
+    .all-services,
+    .info-services {
+        padding: 60px 0;
+    }
+
+    .styled-list li {
+        margin-bottom: 8px;
+    }
+
+    .all-services__title p {
+        font-size: 16px;
+    }
+
+    .all-services__itemcol {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+// margin-inline-end: 12px;
+// padding-inline-start: 28px;
+
+// right: 0;
+// inset-inline-end: 0;

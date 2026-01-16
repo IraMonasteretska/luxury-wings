@@ -254,6 +254,12 @@ h4 {
         background: linear-gradient(89.8deg, rgba(183, 153, 70, 0) 18.43%, #B79946 48.53%);
     }
 
+    .ctabox.ctabox__v2 {
+        .ctabox-img {
+            transform: scaleX(-1);
+        }
+    }
+
 
     @media(min-width:991px) {
         .offset-lg-1 {
