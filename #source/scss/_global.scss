@@ -259,6 +259,15 @@ h4 {
             transform: scaleX(-1);
         }
     }
+    
+    .inputfield.calendar input[type=date] {
+        padding-right: 50px;
+        text-align: right;
+    }
+
+    .inputfield.calendar label.inputlabel {
+        inset-inline-start: 50px;
+    }
 
 
     @media(min-width:991px) {

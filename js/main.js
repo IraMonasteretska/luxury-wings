@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    
+
     if ($("#scene").length) {
         var scene = document.getElementById('scene');
         var parallaxInstance = new Parallax(scene);
@@ -131,5 +131,55 @@ $(document).ready(function () {
     $(document).on('click', '.menu-overlay', function () {
         closeMenu();
     });
+
+
+    // Contact form
+    document.querySelectorAll('.inputfield input, .inputfield select').forEach(element => {
+
+        checkValue(element);
+
+        element.addEventListener('focus', function () {
+            this.nextElementSibling.classList.add('active');
+        });
+
+        element.addEventListener('blur', function () {
+            checkValue(this);
+        });
+
+        element.addEventListener('change', function () {
+            checkValue(this);
+        });
+
+        // Для input також слухаємо input event
+        if (element.tagName === 'INPUT') {
+            element.addEventListener('input', function () {
+                checkValue(this);
+            });
+        }
+    });
+
+    function checkValue(element) {
+        const label = element.nextElementSibling;
+
+        // Для select перевіряємо чи вибрано не порожнє значення
+        if (element.tagName === 'SELECT') {
+            if (element.value && element.value !== '0') {
+                label.classList.add('active');
+                element.classList.add('filled');
+            } else {
+                label.classList.remove('active');
+                element.classList.remove('filled');
+            }
+        } else {
+            // Для input
+            if (element.value) {
+                label.classList.add('active');
+                element.classList.add('filled');
+            } else {
+                label.classList.remove('active');
+                element.classList.remove('filled');
+            }
+        }
+    }
 
 })
